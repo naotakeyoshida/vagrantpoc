@@ -17,7 +17,7 @@ You can deploy five VMs(CentOS 7.2) on VirtualBox. This code written for PoC.
 2. `cd vagrantpoc`
 3. `vagrant up`
   
-After installation process, you can use five VM(CentOS 7.2) with configuration below.
+After installation process, you can use five VM(CentOS 7.2) with network configuration below.
 * node1 (192.168.33.11)
 * node2 (192.168.33.12)
 * node3 (192.168.33.13)
