@@ -2,17 +2,17 @@
 This code is written for PoC.
   
   
-##Description
+## Description
 You can deploy five VMs(CentOS 7.2) on VirtualBox. This code written for PoC.
   
   
-##Requirement
+## Requirement
 * Vagrant
 * VirtualBox
 * VirtualBox Host Memory: 4GB or more
+
   
-  
-##Usage
+## Usage
 1. `git clone [this repo]`
 2. `cd vagrantpoc`
 3. `vagrant up`
