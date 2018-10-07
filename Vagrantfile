@@ -8,6 +8,7 @@ Vagrant.configure(2) do |config|
       centos72.vm.synced_folder ".", "/vagrant"
       centos72.vm.network "forwarded_port", guest: 443, host: 4431
       centos72.vm.network "private_network", ip: "192.168.33.11", virtualbox__intnet: "intnet"
+      centos72.vm.network "private_network", ip: "172.16.32.11", virtualbox__intnet: "intnet"
       centos72.vm.provider "virtualbox" do |vb|
           vb.name = "node1"
           vb.customize ["modifyvm", :id, "--memory", 1024]
@@ -18,6 +19,7 @@ Vagrant.configure(2) do |config|
       centos72.vm.synced_folder ".", "/vagrant"
       centos72.vm.network "forwarded_port", guest: 443, host: 4432
       centos72.vm.network "private_network", ip: "192.168.33.12", virtualbox__intnet: "intnet"
+      centos72.vm.network "private_network", ip: "172.16.32.12", virtualbox__intnet: "intnet"
       centos72.vm.provider "virtualbox" do |vb|
           vb.name = "node2"
 	  vb.customize ["modifyvm", :id, "--memory", 1024]
@@ -28,6 +30,7 @@ Vagrant.configure(2) do |config|
       centos72.vm.synced_folder ".", "/vagrant"
       centos72.vm.network "forwarded_port", guest: 443, host: 4433
       centos72.vm.network "private_network", ip: "192.168.33.13", virtualbox__intnet: "intnet"
+      centos72.vm.network "private_network", ip: "172.16.32.13", virtualbox__intnet: "intnet"
       centos72.vm.provider "virtualbox" do |vb|
           vb.name = "node3"
           vb.customize ["modifyvm", :id, "--memory", 1024]
@@ -38,18 +41,9 @@ Vagrant.configure(2) do |config|
       centos72.vm.synced_folder ".", "/vagrant"
       centos72.vm.network "forwarded_port", guest: 443, host: 4434
       centos72.vm.network "private_network", ip: "192.168.33.14", virtualbox__intnet: "intnet"
+      centos72.vm.network "private_network", ip: "172.16.32.14", virtualbox__intnet: "intnet"
       centos72.vm.provider "virtualbox" do |vb|
           vb.name = "node4"
-          vb.customize ["modifyvm", :id, "--memory", 1024]
-      end
-  end
-  config.vm.define "node5" do |centos72|
-      centos72.vm.hostname = "node5.local"
-      centos72.vm.synced_folder ".", "/vagrant"
-      centos72.vm.network "forwarded_port", guest: 443, host: 4435
-      centos72.vm.network "private_network", ip: "192.168.33.15", virtualbox__intnet: "intnet"
-      centos72.vm.provider "virtualbox" do |vb|
-          vb.name = "node5"
           vb.customize ["modifyvm", :id, "--memory", 1024]
       end
   end
